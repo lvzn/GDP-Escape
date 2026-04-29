@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://47tw448tq7ik"]
+
+[ext_resource type="Script" uid="uid://7symhdx2koln" path="res://scripts/menu.gd" id="1_4ytvr"]
+[ext_resource type="FontFile" uid="uid://btoxtqg8fuasy" path="res://assets/fonts/Silver.ttf" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://ceylbndq7gp2y" path="res://assets/sprites/background_0.png" id="3_g3eks"]
+[ext_resource type="Texture2D" uid="uid://lnrv0laerkin" path="res://assets/sprites/background_1.png" id="4_v86rl"]
+[ext_resource type="Texture2D" uid="uid://b6l0x548xr4cm" path="res://assets/sprites/background_2.png" id="5_13sgg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yqeox"]
+font = ExtResource("1_yqeox")
+font_size = 128
+
+[sub_resource type="Theme" id="Theme_vjb58"]
+default_font = ExtResource("1_yqeox")
+default_font_size = 128
+
+[node name="Menu" type="Control" unique_id=159355253]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ytvr")
+
+[node name="VFlowContainer" type="HFlowContainer" parent="." unique_id=1999885774]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -613.0
+offset_top = -223.0
+offset_right = 613.0
+offset_bottom = 223.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VFlowContainer" unique_id=1457167902]
+layout_mode = 2
+text = "Project Escape (from university)"
+label_settings = SubResource("LabelSettings_yqeox")
+
+[node name="Start" type="Button" parent="VFlowContainer" unique_id=1271747963]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+theme = SubResource("Theme_vjb58")
+text = "Start game"
+
+[node name="Quit" type="Button" parent="VFlowContainer" unique_id=288736517]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+theme = SubResource("Theme_vjb58")
+text = "Quit game"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=419074306]
+z_index = -50
+position = Vector2(1313, 660.0001)
+scale = Vector2(10, 10)
+texture = ExtResource("3_g3eks")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1897098369]
+z_index = -25
+position = Vector2(1218, 624.0001)
+scale = Vector2(10, 10)
+texture = ExtResource("4_v86rl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1121384182]
+position = Vector2(1312.0001, 670)
+scale = Vector2(10, 10)
+texture = ExtResource("5_13sgg")

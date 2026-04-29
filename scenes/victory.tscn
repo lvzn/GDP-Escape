@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://b08uucda345sv"]
+
+[ext_resource type="Script" uid="uid://c6vss8uw6vt6g" path="res://scripts/victory.gd" id="1_g6lwx"]
+[ext_resource type="FontFile" uid="uid://btoxtqg8fuasy" path="res://assets/fonts/Silver.ttf" id="2_5hn41"]
+[ext_resource type="Texture2D" uid="uid://ceylbndq7gp2y" path="res://assets/sprites/background_0.png" id="3_n2k88"]
+[ext_resource type="Texture2D" uid="uid://lnrv0laerkin" path="res://assets/sprites/background_1.png" id="4_eaoty"]
+[ext_resource type="Texture2D" uid="uid://b6l0x548xr4cm" path="res://assets/sprites/background_2.png" id="5_04qlw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yqeox"]
+font = ExtResource("2_5hn41")
+font_size = 128
+
+[sub_resource type="LabelSettings" id="LabelSettings_5hn41"]
+font = ExtResource("2_5hn41")
+font_size = 96
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_vjb58"]
+default_font = ExtResource("2_5hn41")
+default_font_size = 128
+
+[node name="Victory" type="Control" unique_id=159355253]
+custom_minimum_size = Vector2(2560, 1440)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g6lwx")
+
+[node name="VFlowContainer" type="HFlowContainer" parent="." unique_id=1999885774]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -252.0
+offset_right = 250.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VFlowContainer" unique_id=1457167902]
+layout_mode = 2
+text = "You won!"
+label_settings = SubResource("LabelSettings_yqeox")
+
+[node name="HighscoreLabel" type="Label" parent="VFlowContainer" unique_id=525934114]
+layout_mode = 2
+text = "Highscore: "
+label_settings = SubResource("LabelSettings_5hn41")
+
+[node name="ScoreLabel" type="Label" parent="VFlowContainer" unique_id=940280682]
+layout_mode = 2
+text = "Your score: "
+label_settings = SubResource("LabelSettings_yqeox")
+
+[node name="Quit" type="Button" parent="VFlowContainer" unique_id=288736517]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+theme = SubResource("Theme_vjb58")
+text = "Quit game"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=419074306]
+z_index = -50
+position = Vector2(1313, 660.0001)
+scale = Vector2(9.996577, 10)
+texture = ExtResource("3_n2k88")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1897098369]
+z_index = -25
+position = Vector2(1218, 624.0001)
+scale = Vector2(10, 10)
+texture = ExtResource("4_eaoty")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1121384182]
+position = Vector2(1312.0001, 670)
+scale = Vector2(10, 10)
+texture = ExtResource("5_04qlw")

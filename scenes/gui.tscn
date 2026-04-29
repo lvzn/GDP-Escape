@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://b1d7y603in0q0"]
+
+[ext_resource type="Script" uid="uid://70br67tjajdo" path="res://scripts/gui.gd" id="1_efmwq"]
+[ext_resource type="Texture2D" uid="uid://cbsicsrmu6ldm" path="res://assets/sprites/ui/All.png" id="2_mfius"]
+[ext_resource type="FontFile" uid="uid://btoxtqg8fuasy" path="res://assets/fonts/Silver.ttf" id="2_ynd5l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynd5l"]
+atlas = ExtResource("2_mfius")
+region = Rect2(114, 114, 12, 12)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ynd5l"]
+font = ExtResource("2_ynd5l")
+font_size = 128
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mfius"]
+load_path = "res://.godot/imported/All.png-272edb8968fdfd7ac054f48988775f85.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8iy7"]
+atlas = SubResource("CompressedTexture2D_mfius")
+region = Rect2(98, 114, 12, 12)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jqlde"]
+load_path = "res://.godot/imported/All.png-272edb8968fdfd7ac054f48988775f85.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08a8y"]
+atlas = SubResource("CompressedTexture2D_jqlde")
+region = Rect2(82, 114, 12, 12)
+
+[sub_resource type="LabelSettings" id="LabelSettings_66xuh"]
+font = ExtResource("2_ynd5l")
+font_size = 96
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfius"]
+atlas = ExtResource("2_mfius")
+region = Rect2(135, 135, 18, 17)
+
+[node name="GUI" type="CanvasLayer" unique_id=168303460]
+follow_viewport_scale = 4.196
+script = ExtResource("1_efmwq")
+
+[node name="Health" type="Node2D" parent="." unique_id=968528246]
+
+[node name="FullHeart" type="Sprite2D" parent="Health" unique_id=44739751]
+position = Vector2(106, 78)
+scale = Vector2(8, 8)
+texture = SubResource("AtlasTexture_ynd5l")
+
+[node name="Label" type="Label" parent="Health" unique_id=2039017631]
+offset_left = 175.0
+offset_top = 29.0
+offset_right = 283.0
+offset_bottom = 171.0
+text = "100"
+label_settings = SubResource("LabelSettings_ynd5l")
+
+[node name="HalfHeart" type="Sprite2D" parent="." unique_id=1172599005]
+position = Vector2(1389, -122)
+scale = Vector2(8, 8)
+texture = SubResource("AtlasTexture_b8iy7")
+
+[node name="EmptyHeart" type="Sprite2D" parent="." unique_id=1863192936]
+position = Vector2(1271, -123)
+scale = Vector2(8, 8)
+texture = SubResource("AtlasTexture_08a8y")
+
+[node name="StarCounter" type="Node2D" parent="." unique_id=125886360]
+position = Vector2(-7, 107)
+scale = Vector2(1.0003121, 1)
+
+[node name="Label" type="Label" parent="StarCounter" unique_id=1761703956]
+offset_left = 178.94415
+offset_top = 55.0
+offset_right = 450.94415
+offset_bottom = 342.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_66xuh")
+
+[node name="Star" type="Sprite2D" parent="StarCounter" unique_id=181729770]
+position = Vector2(112.964745, 86.00001)
+scale = Vector2(4.0867834, 4.269666)
+texture = SubResource("AtlasTexture_mfius")
