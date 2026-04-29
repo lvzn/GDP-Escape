@@ -476,7 +476,6 @@ position = Vector2(58, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorderLeft" unique_id=1451828156]
 shape = SubResource("WorldBoundaryShape2D_ft3hr")
-disabled = true
 
 [node name="Background" type="Node2D" parent="." unique_id=1920912821]
 position = Vector2(0, 307)
